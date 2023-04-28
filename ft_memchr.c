@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 15:31:45 by escastel          #+#    #+#             */
-/*   Updated: 2023/04/28 15:58:48 by escastel         ###   ########.fr       */
+/*   Created: 2023/04/28 16:35:06 by escastel          #+#    #+#             */
+/*   Updated: 2023/04/28 16:48:50 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include <stdlib.h>
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	while (*s != '\0')
+	size_t	i;
+
+	i = 0;
+	while (i < n)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		if (((unsigned char *)s)[i] == (unsigned char)c)
+			return (&((void *)s)[i]);
+		i++;
 	}
-	if (*s == '\0' && (char)c == '\0')
-		return ((char *)s);
 	return (0);
 }

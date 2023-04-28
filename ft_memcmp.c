@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 15:31:45 by escastel          #+#    #+#             */
-/*   Updated: 2023/04/28 15:58:48 by escastel         ###   ########.fr       */
+/*   Created: 2023/04/28 17:21:01 by escastel          #+#    #+#             */
+/*   Updated: 2023/04/28 17:33:43 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include <stdlib.h>
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	while (*s != '\0')
+	size_t			i;
+	unsigned char	*o;
+	unsigned char	*t;
+
+	i = 0;
+	o = (unsigned char *)s1;
+	t = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
+	while (i < n)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		if ((size_t)o[i] > (size_t)t[i])
+			return ((size_t)o[i] - (size_t)t[i]);
+		if ((size_t)o[i] < (size_t)t[i])
+			return ((size_t)o[i] - (size_t)t[i]);
+		i++;
 	}
-	if (*s == '\0' && (char)c == '\0')
-		return ((char *)s);
 	return (0);
 }

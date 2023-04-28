@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 15:31:45 by escastel          #+#    #+#             */
-/*   Updated: 2023/04/28 15:58:48 by escastel         ###   ########.fr       */
+/*   Created: 2023/04/28 12:53:29 by escastel          #+#    #+#             */
+/*   Updated: 2023/04/28 15:35:17 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include <stdlib.h>
+
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	while (*s != '\0')
+	char	*d;
+	char	*s;
+	size_t	i;
+
+	i = 0;
+	s = (char *)src;
+	d = (char *)dst;
+	if (src == NULL && dst == NULL)
+		return (0);
+	if (d > s)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		while (n-- != 0)
+			d[n] = s[n];
 	}
-	if (*s == '\0' && (char)c == '\0')
-		return ((char *)s);
-	return (0);
+	else
+	{
+		while (i < n)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	return (dst);
 }
