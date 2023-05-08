@@ -1,31 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 19:06:46 by escastel          #+#    #+#             */
-/*   Updated: 2023/05/03 12:19:24 by escastel         ###   ########.fr       */
+/*   Created: 2023/05/03 15:26:26 by escastel          #+#    #+#             */
+/*   Updated: 2023/05/03 16:35:15 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 
-char	*ft_strdup(const char *s1)
+static int	ft_count(long int r)
 {
-	char	*cpy;
-	size_t	i;
+	int	c;
 
-	cpy = malloc((ft_strlen(s1) + 1) * sizeof(char));
-	if (cpy == NULL)
-		return (0);
-	i = 0;
-	while (i <= (size_t)ft_strlen(s1))
+	c = 0;
+	while (r >= 10)
 	{
-		cpy[i] = s1[i];
-		i++;
+		r /= 10;
+		c++;
 	}
-	return (cpy);
+	return (c);
+}
+
+char	*ft_itoa(int n)
+{
+	char		*ptr;
+	int			i;
+	long int	r;
+
+	r = n;
+	i = 0;
+	if (n < 0)
+	{
+		r *= -1;
+		i = 1;
+	}
+	i = ft_count(r) + 1 + i;
+	ptr = (char *)malloc((i + 1) * sizeof(char));
+	if (!ptr)
+		return (0);
+	ptr[i--] = '\0';
+	while (i >= 0)
+	{
+		ptr[i] = ((r % 10) + '0');
+		r /= 10;
+		i--;
+		if (n < 0)
+			ptr[0] = '-';
+	}
+	return (ptr);
 }
