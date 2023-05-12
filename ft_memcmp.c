@@ -6,11 +6,11 @@
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:21:01 by escastel          #+#    #+#             */
-/*   Updated: 2023/04/28 17:33:43 by escastel         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:10:35 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

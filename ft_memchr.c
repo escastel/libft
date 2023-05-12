@@ -6,11 +6,11 @@
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 16:35:06 by escastel          #+#    #+#             */
-/*   Updated: 2023/04/28 16:48:50 by escastel         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:10:25 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

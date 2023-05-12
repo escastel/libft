@@ -6,12 +6,11 @@
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 16:29:31 by escastel          #+#    #+#             */
-/*   Updated: 2023/05/01 17:12:35 by escastel         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:11:53 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

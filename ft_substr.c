@@ -6,11 +6,10 @@
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 13:40:32 by escastel          #+#    #+#             */
-/*   Updated: 2023/05/01 14:31:23 by escastel         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:13:01 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

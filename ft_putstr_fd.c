@@ -6,11 +6,11 @@
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 18:42:06 by escastel          #+#    #+#             */
-/*   Updated: 2023/05/01 18:47:57 by escastel         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:14:19 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

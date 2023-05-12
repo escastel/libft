@@ -6,11 +6,11 @@
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:26:26 by escastel          #+#    #+#             */
-/*   Updated: 2023/05/03 16:35:15 by escastel         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:10:02 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_count(long int r)
 {

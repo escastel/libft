@@ -6,11 +6,11 @@
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 12:53:29 by escastel          #+#    #+#             */
-/*   Updated: 2023/04/28 15:35:17 by escastel         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:10:44 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {

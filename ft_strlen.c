@@ -6,11 +6,11 @@
 /*   By: escastel <escastel@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 11:19:34 by escastel          #+#    #+#             */
-/*   Updated: 2023/04/25 11:35:52 by escastel         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:12:16 by escastel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
