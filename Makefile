@@ -54,19 +54,19 @@ FLAGS = -Werror -Wall -Wextra
 all: $(NAME)
 
 $(OBJECTS): $(FILES)
-	gcc $(FLAGS) -c $(FILES)
+	@ gcc $(FLAGS) -c $(FILES)
 
 $(NAME): $(OBJECTS)
-	ar rcs $(NAME) $(OBJECTS)
+	@ ar rcs $(NAME) $(OBJECTS)
 	
 bonus: $(OBJECTS_BONUS) $(OBJECTS)
-	ar rcs $(NAME) $(OBJECTS) $(OBJECTS_BONUS)
+	@ ar rcs $(NAME) $(OBJECTS) $(OBJECTS_BONUS)
 
 clean:
-	rm -f $(OBJECTS) $(OBJECTS_BONUS)
+	@ rm -f $(OBJECTS) $(OBJECTS_BONUS)
 
 fclean: clean
-	rm -f $(NAME) $(OBJECTS) $(OBJECTS_BONUS)
+	@ rm -f $(NAME) $(OBJECTS) $(OBJECTS_BONUS)
 
 re: fclean all
 
